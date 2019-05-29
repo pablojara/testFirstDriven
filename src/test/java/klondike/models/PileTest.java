@@ -99,20 +99,20 @@ public class PileTest {
 		CardListBuilder cardListBuilder = new CardListBuilder();
 		cardListBuilder.card(new CardBuilder().number(Number.AS).suit(Suit.DIAMONDS).facedUp().build());
 		Pile pile = new PileBuilder().card(new CardBuilder().number(Number.TWO).suit(Suit.PIKES).build()).build();
-		this.testGetTop(cardListBuilder.build(), pile);
+		this.testPeek(cardListBuilder.build(), pile);
 	}
 
 	@Test
-	public void testGetTopMany() {
+	public void testPeekMany() {
 		CardListBuilder cardListBuilder = new CardListBuilder();
 		cardListBuilder.card(new CardBuilder().number(Number.NINE).suit(Suit.CLOVERS).facedUp().build());
 		cardListBuilder.card(new CardBuilder().number(Number.EIGHT).suit(Suit.DIAMONDS).facedUp().build());
 		cardListBuilder.card(new CardBuilder().number(Number.SEVEN).suit(Suit.PIKES).facedUp().build());
 		Pile pile = new PileBuilder().card(new CardBuilder().number(Number.TEN).suit(Suit.DIAMONDS).build()).build();
-		this.testGetTop(cardListBuilder.build(), pile);
+		this.testPeek(cardListBuilder.build(), pile);
 	}
 
-	private void testGetTop(List<Card> cards, Pile pile) {
+	private void testPeek(List<Card> cards, Pile pile) {
 		for (Card card : cards) {
 			pile.push(card);
 		}
