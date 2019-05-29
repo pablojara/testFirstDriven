@@ -27,7 +27,7 @@ public class FilledFoundationBuilder {
 	public Foundation build() {
 		FoundationBuilder foundationBuilder = new FoundationBuilder();
 		for(int i=0; i<=this.number.ordinal(); i++) {
-			foundationBuilder.card(new CardBuilder().number(Number.values()[i]).suit(this.suit).build());
+			foundationBuilder.card(new CardBuilder().number(Number.values()[i]).suit(this.suit).facedUp().build());
 		}
 		return foundationBuilder.build();
 	}
