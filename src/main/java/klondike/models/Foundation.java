@@ -22,6 +22,7 @@ public class Foundation {
     }
 
     public Card pop() {
+    	assert !this.cards.isEmpty();
         return this.cards.pop();
     }
 
