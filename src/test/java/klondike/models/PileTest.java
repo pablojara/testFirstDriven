@@ -134,13 +134,13 @@ public class PileTest {
 	}
 
 	@Test
-	public void testRemoveTop() {
+	public void testPop() {
 		Pile pile = new PileBuilder().card()
 				.card(new CardBuilder().number(Number.TEN).suit(Suit.DIAMONDS).build()).build();
 		pile.push(new CardBuilder().number(Number.NINE).suit(Suit.CLOVERS).facedUp().build());
 		pile.push(new CardBuilder().number(Number.EIGHT).suit(Suit.DIAMONDS).facedUp().build());
 		pile.push(new CardBuilder().number(Number.SEVEN).suit(Suit.PIKES).facedUp().build());
-		pile.removeTop(4);
+		pile.pop(4);
 		assertTrue(pile.pop().isFacedUp());
 		assertTrue(pile.empty());
 	}
