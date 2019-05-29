@@ -35,7 +35,7 @@ public class Stock {
         this.cards.push(card);
     }
     
-    public List<Card> takeTop(int quantity) {
+    public List<Card> pop(int quantity) {
         assert 0 < quantity && quantity <= this.cards.size();
         List<Card> cardsToReturn = new ArrayList<Card>(this.cards.subList(0, quantity));
         this.cards.removeAll(cardsToReturn);
