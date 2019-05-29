@@ -18,6 +18,7 @@ public class Foundation {
     }
 
     public Card peek() {
+    	assert !this.cards.isEmpty();
         return this.cards.peek();
     }
 
