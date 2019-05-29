@@ -85,7 +85,7 @@ public class Game {
         if (!pile.fitsIn(card)) {
             return Error.NO_FIT_PILE;
         }
-        pile.addToTop(Arrays.asList(this.waste.pop()));
+        pile.push(Arrays.asList(this.waste.pop()));
         return null;
     }
 
@@ -101,7 +101,7 @@ public class Game {
         if (!pile.fitsIn(card)) {
             return Error.NO_FIT_PILE;
         }
-        pile.addToTop(Arrays.asList(foundation.pop()));
+        pile.push(Arrays.asList(foundation.pop()));
         return null;
     }
 
@@ -139,7 +139,7 @@ public class Game {
             return Error.NO_FIT_PILE;
         }
         originPile.removeTop(numberOfCards);
-        destinationPile.addToTop(cards);
+        destinationPile.push(cards);
         return null;
     }
 
