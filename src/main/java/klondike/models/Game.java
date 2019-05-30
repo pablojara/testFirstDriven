@@ -118,7 +118,7 @@ public class Game {
             return Error.NO_FIT_FOUNDATION;
         }
         foundation.push(card);
-        pile.pop(1);
+        pile.removeTop(1);
         return null;
     }
 
@@ -138,7 +138,7 @@ public class Game {
         if (!destinationPile.fitsIn(cards.get(cards.size() - 1))) {
             return Error.NO_FIT_PILE;
         }
-        originPile.pop(numberOfCards);
+        originPile.removeTop(numberOfCards);
         destinationPile.push(cards);
         return null;
     }

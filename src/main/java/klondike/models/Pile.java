@@ -59,7 +59,7 @@ public class Pile {
 		this.numberOfFaceUpCards += cards.size();
 	}
 
-	public void pop(int numberOfCards) {
+	public void removeTop(int numberOfCards) {
 		assert numberOfCards <= this.numberOfFaceUpCards;
 		for (int i = 0; i < numberOfCards; i++) {
 			this.cards.pop();
